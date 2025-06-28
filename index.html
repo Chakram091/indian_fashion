@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Indian Fashion Stories</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+<script defer src="script.js"></script>
+</head>
+<body>
+<nav id="nav">
+ <a href="#top">Top</a>
+ <a href="#pink-tax">Pink Tax</a>
+ <a href="#style-gender">Style × Gender</a>
+ <a href="#color-palette">Colour Palette</a>
+ <a href="#price-ladder">Price Ladder</a>
+ <a href="#unisex-tone">Unisex Tone</a>
+ <a href="#photo-price">Photo vs Price</a>
+ <a href="#dress-price">Dress Code</a>
+ <a href="#roadster-keywords">Roadster Voice</a>
+ <a href="#charm-pricing">Charm Pricing</a>
+ <a href="#color-price-heatmap">Colour × Price</a>
+ <a href="#capsule">Capsule Wardrobe</a>
+</nav>
+<header id="top" class="hero story">
+ <h1>Indian Fashion Dataset</h1>
+ <p class="note" id="meta-note"></p>
+</header>
+<main>
+<section id="pink-tax" class="story">
+ <h2>Pink-Tax</h2>
+ <p class="note">Women pay more for pink than men do for blue.</p>
+ <div class="chart" id="chart-pink-tax"></div>
+</section>
+<section id="style-gender" class="story">
+ <h2>Style × Gender</h2>
+ <p class="note">Ethnic wear skews feminine while Activewear is more male.</p>
+ <div class="chart" id="chart-style-gender"></div>
+</section>
+<section id="color-palette" class="story">
+ <h2>Top-10 Colour Palette by Gender</h2>
+ <p class="note">Men favour blue while women have a richer mix.</p>
+ <div class="chart" id="chart-color-palette"></div>
+</section>
+<section id="price-ladder" class="story">
+ <h2>Price Ladder: Top Brands</h2>
+ <p class="note">Median price varies widely across brands.</p>
+ <div class="chart" id="chart-price-ladder"></div>
+</section>
+<section id="unisex-tone" class="story">
+ <h2>Unisex Language Tone</h2>
+ <p class="note">Most unisex descriptions stay neutral.</p>
+ <div class="chart" id="chart-unisex-tone"></div>
+</section>
+<section id="photo-price" class="story">
+ <h2>Photo Count vs Price</h2>
+ <p class="note">Costlier items tend to show more photos.</p>
+ <div class="chart" id="chart-photo-price"></div>
+</section>
+<section id="dress-price" class="story">
+ <h2>Dress Code vs Price</h2>
+ <p class="note">Party and Formal wear command higher prices.</p>
+ <div class="chart" id="chart-dress-price"></div>
+</section>
+<section id="roadster-keywords" class="story">
+ <h2>Brand-Voice Keywords: Roadster</h2>
+ <p class="note">Common adjectives reveal the brand's rugged vibe.</p>
+ <div class="chart" id="chart-roadster-keywords"></div>
+</section>
+<section id="charm-pricing" class="story">
+ <h2>Charm Pricing Prevalence</h2>
+ <p class="note">₹99 endings dominate the catalog.</p>
+ <div class="chart" id="chart-charm-pricing"></div>
+</section>
+<section id="color-price-heatmap" class="story">
+ <h2>Colour × Price Heatmap</h2>
+ <p class="note">Blue items span all price points.</p>
+ <div class="chart" id="chart-color-price-heatmap"></div>
+</section>
+<section id="capsule" class="story">
+ <h2>Capsule Wardrobe ≤ ₹1 500</h2>
+ <p class="note">Ten versatile picks on a budget.</p>
+ <div class="chart" id="chart-capsule"></div>
+</section>
+</main>
+</body>
+</html>
