@@ -32,7 +32,7 @@ function renderPinkTax(data){
  g.append('g').attr('transform',`translate(0,${h})`).call(d3.axisBottom(x));
  g.append('g').attr('transform','translate(40,0)').call(d3.axisLeft(y));
  g.selectAll('rect').data([data.women_mean,data.men_mean]).enter().append('rect')
-   .attr('x',(d,i)=>x(i? 'Men-Blue':'Women-Pink'))
+   .attr('x',(_d,i)=>x(i? 'Men-Blue':'Women-Pink'))
    .attr('width',x.bandwidth()).attr('y',h).attr('height',0).attr('fill','#f9a').transition().duration(400)
    .attr('y',d=>y(d)).attr('height',d=>h-y(d));
 }
@@ -46,10 +46,10 @@ function renderStyleGender(data){
  g.append('g').attr('transform',`translate(0,${h})`).call(d3.axisBottom(x));
  g.append('g').attr('transform','translate(40,0)').call(d3.axisLeft(y));
  g.selectAll('g.layer').data(stack).enter().append('g').attr('fill',d=>color(d.key)).selectAll('rect')
-   .data(d=>d).enter().append('rect').attr('x',(d,i)=>x(data.styles[i]))
+   .data(d=>d).enter().append('rect').attr('x',(_d,i)=>x(data.styles[i]))
    .attr('width',x.bandwidth()).attr('y',h).attr('height',0)
    .transition().duration(400).attr('y',d=>y(d[1])).attr('height',d=>y(d[0])-y(d[1]));
- g.append('g').selectAll('text').data(data.genders).enter().append('text').attr('x',w-20).attr('y',(d,i)=>20+i*14).text(d=>d).attr('fill',d=>color(d));
+ g.append('g').selectAll('text').data(data.genders).enter().append('text').attr('x',w-20).attr('y',(_d,i)=>20+i*14).text(d=>d).attr('fill',d=>color(d));
 }
 
 function renderPaletteGender(data){
@@ -60,8 +60,8 @@ function renderPaletteGender(data){
  g.append('g').attr('transform',`translate(0,${h})`).call(d3.axisBottom(x0));
  g.append('g').attr('transform','translate(40,0)').call(d3.axisLeft(y));
  g.append('g').selectAll('g').data(data).enter().append('g').attr('transform',d=>`translate(${x0(d.color)},0)`).selectAll('rect')
-   .data(d=>[d.men,d.women]).enter().append('rect').attr('x',(d,i)=>x1(i? 'women':'men')).attr('width',x1.bandwidth())
-   .attr('y',h).attr('height',0).attr('fill',(d,i)=>i?'#f4a':'#69b').transition().duration(400)
+   .data(d=>[d.men,d.women]).enter().append('rect').attr('x',(_d,i)=>x1(i? 'women':'men')).attr('width',x1.bandwidth())
+   .attr('y',h).attr('height',0).attr('fill',(_d,i)=>i?'#f4a':'#69b').transition().duration(400)
    .attr('y',d=>y(d)).attr('height',d=>h-y(d));
 }
 
